@@ -2,6 +2,7 @@ venv
 .env
 main.py
 db.sqlite3
-media
+media/post_img
 staticfiles
 .idea/
+*.pyc

@@ -18,7 +18,7 @@ class PostIndex(ListView):
         qs = qs.annotate(
             numero_comentario=Count(
                 Case(
-                    When(comentario__publicado_comentario=True, then=1), output_field= IntegerField()
+                    When(comentario__publicado_comentario=True, then=1), output_field=IntegerField()
                 )
             )
         )
