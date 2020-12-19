@@ -1,0 +1,32 @@
+{% load static %}
+<div class="sidebar">
+  <div class="sidebar-inner d-flex flex-column">
+    <div class="px-4 py-5 align-self-center"><a href="{% url 'index' %}"><img src="{% static 'img/logo.png'%} " alt="" width="100"></a></div>
+    <div class="sidebar-menu-holder flex-grow-1">
+      <ul class="sidebar-menu list-unstyled">
+        <li>
+          <form method="GET" action="{% url 'post_busca' %}">
+          <div class="container-fluid"><input class="form-control" name="termo" value="{{request.GET.termo}}" type="search" placeholder="Busca"></div><br>
+          </form>
+        </li>
+        <li class="mb-2 pb-1">
+          <!-- Link--><a class="sidebar-link h6 text-uppercase letter-spacing-2 font-weight-bold text-small active" href="{% url 'index' %}">Home</a>
+        </li>
+        <li class="mb-2 pb-1">
+          <!-- Link--><a class="sidebar-link h6 text-uppercase letter-spacing-2 font-weight-bold text-small" href="#">Sobre</a>
+        </li>
+
+      </ul>
+    </div>
+  <div class="px-4 py-3">
+      <ul class="list-inline list-social mb-3">
+        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-instagram"></i></a></li>
+        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-dribbble"></i></a></li>
+        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fas fa-envelope"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>

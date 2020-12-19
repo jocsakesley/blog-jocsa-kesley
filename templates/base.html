@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block titulo %}{% endblock %}
+
+    {% include "partials/_head.html" %}
+  </head>
+  <body>
+    {% include "partials/_sidebar.html" %}
+
+    {%block conteudo %}{% endblock %}
+    {%include "partials/_footer.html" %}
+  </body>
+</html>

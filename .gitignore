@@ -1,0 +1,7 @@
+venv
+.env
+main.py
+db.sqlite3
+media
+staticfiles
+.idea/
