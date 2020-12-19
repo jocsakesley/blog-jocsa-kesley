@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.views.generic.list import ListView
 from django.views.generic.edit import UpdateView
 from .models import Post
-from django.db.models import Q, When, Case, Count
+from django.db.models import Q, When, Case, Count, IntegerField
 from blog.comentarios.forms import FormComantario
 from blog.comentarios.models import Comentario
 
@@ -18,7 +18,7 @@ class PostIndex(ListView):
         qs = qs.annotate(
             numero_comentario=Count(
                 Case(
-                    When(comentario__publicado_comentario=True, then=1)
+                    When(comentario__publicado_comentario=True, then=1), output_field= IntegerField()
                 )
             )
         )
