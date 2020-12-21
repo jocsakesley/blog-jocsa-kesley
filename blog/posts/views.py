@@ -25,6 +25,10 @@ class PostIndex(ListView):
 
         return qs
 
+    def get_context_data(self, **kwargs):
+        contexto = super().get_context_data(**kwargs)
+        contexto['ultimos'] = Post.objects.filter(publicado_post=True).order_by('-id')[:2]
+        return contexto
 
 class PostCategoria(PostIndex):
     pass
@@ -57,6 +61,7 @@ class PostDetalhes(UpdateView):
         relacionados = Post.objects.filter(categoria_post=post.categoria_post).order_by("-id")
         contexto['comentarios'] = comentarios
         contexto['relacionados'] = relacionados[:3]
+        contexto['ultimos'] = Post.objects.filter(publicado_post=True).order_by('-id')[:2]
         return contexto
 
 
@@ -69,5 +74,5 @@ class PostDetalhes(UpdateView):
             comentario.usuario_comentario = self.request.user
 
         comentario.save()
-        messages.success(self.request, "Comentário enviado para avaliação", extra_tags="alert-success")
+        messages.success(self.request, "Comentário enviado com sucesso!", extra_tags="alert-success")
         return redirect("post_detalhes", pk=post.pk)

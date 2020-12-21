@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{%load static %}
+{%block conteudo%}
+<div class="page-holder">
+      <div class="px-4 d-block d-lg-none">
+        <!-- navbar-->
+        <header class="header">
+          <nav class="navbar navbar-expand-lg navbar-light px-0">
+            <button class="navbar-toggler navbar-toggler-right text-sm text-uppercase" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <svg class="svg-icon svg-icon-heavy svg-icon-sm text-dark">
+                <use xlink:href="#menu-hamburger-1"> </use>
+              </svg>
+            </button><a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="" width="50"></a>
+          </nav>
+        </header>
+      </div>
+      <div class="px-4 py-5">
+    <div class="container-fluid">
+          <div class="p-5 mb-5 bg-light">
+            <div class="row">
+              <div class="col-sm-3"><img class="img-fluid img-thumbnail rounded-circle" src="{% static 'img/foto-perfil.jpeg' %}" alt=""></div>
+              <div class="col-sm-9">
+                <h1 class="font-weight-normal">Olá! Eu sou  <strong>Jocsã Kesley</strong>. </h1>
+                <h2 class="h1 font-weight-normal mb-4">Sou <strong>Desenvolvedor Python e Django</strong></h2>
+                <p class="text-muted mb-4">Formado em Administração de empresas e Redes de computadores, possuo uma carreira em TI desde 2010 como Agente Censitário de Informática no IBGE, até a atual função como Analista de Suporte na Fundação Bradesco. Atualmente buscando novos desafios na área de desenvolvimento com a Stack Python.</p>
+                <p class="text-muted mb-4"></p>
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item mr-5 my-2"><a class="btn btn-primary rounded-pill" href="#">
+                      <svg class="svg-icon mr-2 align-middle svg-icon-sm">
+                        <use xlink:href="#survey-1"> </use>
+                      </svg><span class="align-middle">Download resume</span></a></li>
+                  <li class="list-inline-item my-2">
+                    <ul class="list-inline mb-0">
+                      <li class="list-inline-item"><a class="reset-anchor" href="#"> <i class="fab fa-facebook-f"></i></a></li>
+                      <li class="list-inline-item"><a class="reset-anchor" href="#"> <i class="fab fa-twitter"></i></a></li>
+                      <li class="list-inline-item"><a class="reset-anchor" href="#"> <i class="fab fa-instagram"></i></a></li>
+                      <li class="list-inline-item"><a class="reset-anchor" href="#"> <i class="fab fa-linkedin-in"></i></a></li>
+                      <li class="list-inline-item"><a class="reset-anchor" href="#"> <i class="fab fa-behance"></i></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <h2 class="h1">Skills</h2>
+          <p class="text-muted mb-4">Received overcame oh sensible so at an. Formed do change merely to county it.</p>
+          <div class="row mb-4">
+            <div class="col-lg-6 mb-4">
+              <div class="d-flex">
+                <div class="flex-grow-1">
+                  <svg class="svg-icon text-primary">
+                    <use xlink:href="#stack-1"> </use>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <h3 class="h5 mr-3">Redes de Computadores</h3>
+                  <p class="text-muted mb-2">Experiência em manutenção de infraestrutura e rede corporativa em ambiente Windows. Conhecimentos em Linux, containers Docker e gerenciamento de serviços de rede aplicados em <a href="https://drive.google.com/file/d/1miwlzK_bjE4iSRrIuoGKnyJeljkPE3LJ/view?usp=sharing">trabalho de conclusão</a>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <div class="d-flex">
+                <div class="flex-grow-1">
+                  <svg class="svg-icon text-primary">
+                    <use xlink:href="#laptop-screen-1"> </use>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <h3 class="h5 mr-3">Suporte ao usuário</h3>
+                  <p class="text-muted mb-2">Atendimento ao usuário em nível 1, na resolução de problemas com sistemas, acessos e equipamentos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <div class="d-flex">
+                <div class="flex-grow-1">
+                  <svg class="svg-icon text-primary">
+                    <use xlink:href="#design-1"> </use>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <h3 class="h5 mr-3">Programação</h3>
+                  <p class="text-muted mb-2">Conhecimentos em programação python com projetos aplicados com webscraping, Data Science e Machine Learning. Uso contínuo do Git e GitHub para controle de versão e compartilhamento de código</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <div class="d-flex">
+                <div class="flex-grow-1">
+                  <svg class="svg-icon text-primary">
+                    <use xlink:href="#multiple-windows-1"> </use>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <h3 class="h5 mr-3">Desenvolvimento Web</h3>
+                  <p class="text-muted mb-2">Desenvolvimento constante em habilidades de Backend com Django na solução de problemas. Conhecimentos em HTML5, CSS3, JavaScript e VUEjs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="h1">Fun facts</h2>
+          <p class="text-muted mb-4">Received overcame oh sensible so at an. Formed do change merely to county it.</p>
+          <div class="row text-center align-items-stretch">
+            <div class="col-lg-3 mb-4">
+              <div class="border p-4 h-100 d-flex align-items-center">
+                <div class="w-100">
+                  <svg class="svg-icon text-gray mb-2">
+                    <use xlink:href="#stack-1"> </use>
+                  </svg>
+                  <h5>Happy Clients</h5>
+                  <p class="mb-0 text-gray h5">1200</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <div class="border p-4 h-100 d-flex align-items-center bg-light">
+                <div class="w-100">
+                  <svg class="svg-icon text-gray mb-2">
+                    <use xlink:href="#quality-1"> </use>
+                  </svg>
+                  <h5>Awards Won</h5>
+                  <p class="mb-0 text-gray h5">18</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <div class="border p-4 h-100 d-flex align-items-center">
+                <div class="w-100">
+                  <svg class="svg-icon text-gray mb-2">
+                    <use xlink:href="#time-1"> </use>
+                  </svg>
+                  <h5>Working Hours</h5>
+                  <p class="mb-0 text-gray h5">6500</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <div class="border p-4 h-100 d-flex align-items-center bg-light">
+                <div class="w-100">
+                  <svg class="svg-icon text-gray mb-2">
+                    <use xlink:href="#hot-coffee-1"> </use>
+                  </svg>
+                  <h5>Coffee Consumed</h5>
+                  <p class="mb-0 text-gray h5">18000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

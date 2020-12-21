@@ -84,11 +84,11 @@
           <form method="POST" action="#comentarioenviado">
             {% csrf_token %}
             <p>Nome:</p>
-            {{form.nome_comentario|add_class:"form-control"}}
+            {{form.nome_comentario|add_class:"form-control"}}<br>
             <p>Email:</p>
-            {{form.email_comentario|add_class:"form-control"}}
+            {{form.email_comentario|add_class:"form-control"}}<br>
             <p>Comentário:</p>
-            {{form.comentario|add_class:"form-control"}}
+            {{form.comentario|add_class:"form-control"}}<br>
             <input type="submit" id="comentarioenviado" value="Enviar" class="btn btn-lg btn-primary">
 
           </form>
@@ -98,6 +98,7 @@
         </div>
 
       </div>
+
 
 
   {% endblock %}
