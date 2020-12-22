@@ -3,6 +3,7 @@
 {% block titulo %}<title>Minimal | Bootstrap portfolio template</title>{% endblock %}
 {%block conteudo%}
 {% load humanize %}
+{% load myfilters %}
 
  <div class="page-holder">
       <div class="px-4 d-block d-lg-none">
@@ -42,7 +43,7 @@
                 <div class="py-3"><a class="reset-anchor" href="{% url 'post_detalhes' post.id %}">
                     <h2 class="h5 listing-item-heading">{{post.titulo_post}}</h2></a>
                   <p class="mb-0 listing-item-description">{{post.excerto_post}}</p>
-                    <p class=" text-small text-info">{{post.data_post|naturalday}} | {{post.numero_comentario}} comentários</p>
+                    <p class=" text-small text-info">{{post.data_post|naturalday}} | {{post.numero_comentario|check_comentarios}}</p>
                 </div>
               </div>
             </div>

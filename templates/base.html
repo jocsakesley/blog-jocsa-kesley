@@ -10,5 +10,25 @@
 
     {%block conteudo %}{% endblock %}
     {%include "partials/_footer.html" %}
+    {% block script %}{% endblock %}
+  <script>
+    let menu = new Vue({
+      el: '#menu',
+      data: {
+        isActive:true,
+      },
+      methods: {
+        active: function (){
+          let home = document.getElementById("home");
+          let sobre = document.getElementById("sobre");
+          if (home.classList.contains("active")) {
+            sobre.classList.add("active");
+            home.classList.remove("active");
+          }
+        }
+      }
+
+    })
+  </script>
   </body>
 </html>

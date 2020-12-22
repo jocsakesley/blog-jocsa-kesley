@@ -10,28 +10,23 @@
           </form>
         </li>
         <li class="mb-2 pb-1">
-          <!-- Link--><a class="sidebar-link h6 text-uppercase letter-spacing-2 font-weight-bold text-small active" href="{% url 'index' %}">Home</a>
+          <!-- Link--><a class="sidebar-link h6 text-uppercase letter-spacing-2 font-weight-bold text-small {%if sobre != 'sobre' %}active{%endif%}" href="{% url 'index' %}">Home</a>
         </li>
         <li class="mb-2 pb-1">
-          <!-- Link--><a class="sidebar-link h6 text-uppercase letter-spacing-2 font-weight-bold text-small" href="{% url 'sobre_index' %}">Sobre</a>
+          <!-- Link--><a class="sidebar-link h6 text-uppercase letter-spacing-2 font-weight-bold text-small {%if sobre == 'sobre' %}active{%endif%}"  href="{% url 'sobre_index' %}">Sobre</a>
         </li>
 
       </ul>
     </div>
   <div class="px-4 py-3">
       <ul class="list-inline list-social mb-3">
-        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-twitter"></i></a></li>
-        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-instagram"></i></a></li>
-        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-linkedin"></i></a></li>
-        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-dribbble"></i></a></li>
-        <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fas fa-envelope"></i></a></li>
+        <li class="list-inline-item"><a class="reset-anchor" href="https://pt-br.facebook.com/Jockbass"><i class="fab fa-facebook-f"></i></a></li>
+        <li class="list-inline-item"><a class="reset-anchor" href="https://www.instagram.com/jocsakesley/"><i class="fab fa-instagram"></i></a></li>
+        <li class="list-inline-item"><a class="reset-anchor" href="https://www.linkedin.com/in/jocsa-kesley-oliveira/"><i class="fab fa-linkedin"></i></a></li>
+        <li class="list-inline-item"><a class="reset-anchor" href="https://github.com/jocsakesley"><i class="fab fa-github"></i></a></li>
+        <li class="list-inline-item"><a class="reset-anchor" href="mailto:jocsadm@gmail.com"><i class="fas fa-envelope"></i></a></li>
       </ul>
     </div>
   </div>
 </div>
-<script>
-let active = function (){
-  document.
-  }
-</script>
+

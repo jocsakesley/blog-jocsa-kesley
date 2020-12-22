@@ -8,4 +8,5 @@ class SobreIndex(TemplateView):
     def get_context_data(self, **kwargs):
         contexto = super().get_context_data(**kwargs)
         contexto['ultimos'] = Post.objects.filter(publicado_post=True).order_by('-id')[:2]
+        contexto['sobre'] = 'sobre'
         return contexto
