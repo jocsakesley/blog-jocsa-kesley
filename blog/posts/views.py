@@ -4,7 +4,7 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import UpdateView
 from .models import Post
 from django.db.models import Q, When, Case, Count, IntegerField
-from blog.comentarios.forms import FormComantario
+from blog.comentarios.forms import FormComentario
 from blog.comentarios.models import Comentario
 
 class PostIndex(ListView):
@@ -14,7 +14,6 @@ class PostIndex(ListView):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        qs = qs.select_related('categoria_post')
         qs = qs.order_by("-id").filter(publicado_post=True)
         qs = qs.annotate(
             numero_comentario=Count(
@@ -52,7 +51,7 @@ class PostBusca(PostIndex):
 class PostDetalhes(UpdateView):
     template_name = "posts/post_detalhes.html"
     model = Post
-    form_class = FormComantario
+    form_class = FormComentario
     context_object_name = "post"
 
     def get_context_data(self, **kwargs):

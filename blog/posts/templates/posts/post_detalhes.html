@@ -35,21 +35,22 @@
               </div>
             </div>
             {% endif %}
-          </div>
-          <div class="row mb-5">
-            <div class="col-lg-12 position-sticky">
-              <div class="text-muted">
-                {{post.conteudo_post|safe}}
+              <div class="row mb-5">
+                <div class="col-lg-12 position-sticky">
+                  <div class="text-muted">
+                    {{post.conteudo_post|safe}}
+                  </div>
+                </div>
               </div>
+           </div>
               <br>
-              <!--<h2 class="h3 mb-4">Compartilhe</h2>
+             <!-- <h2 class="h3 mb-4">Compartilhe</h2>
               <ul class="list-inline">
                 <li class="list-inline-item"><a class="reset-anchor social-share-link facebook" href="#"><i class="fab fa-facebook-f mr-2"></i>Facebook</a></li>
                 <li class="list-inline-item"><a class="reset-anchor social-share-link instagram" href="#"><i class="fab fa-instagram mr-2"></i>Instagram</a></li>
                 <li class="list-inline-item"><a class="reset-anchor social-share-link linkedin" href="#"><i class="fab fa-linkedin mr-2"></i>Linkedin</a></li>
               </ul>-->
-          </div>
-          </div>
+
           <h2 class="h3 mb-4">Artigos relacionados</h2>
           <div class="row">
             {% for relacionado in relacionados %}
@@ -84,8 +85,8 @@
             </div>
           </div>
           {% endfor %}
-          <div class="row mb-5">
-            <div class="col-md-6 col-sm-12"
+          <div class="row">
+            <div class="col-6">
               <form method="POST" action="#comentarioenviado">
                 {% csrf_token %}
                 <p>Nome:</p>
@@ -96,7 +97,7 @@
                 {{form.comentario|add_class:"form-control"}}<br>
                 <input type="submit" id="comentarioenviado" value="Enviar" class="btn btn-lg btn-primary">
 
-              </form>
+              </form></br>
               {% for message in messages %}
                 <div class="alert {{message.tags}}">{{message}}</div>
               {% endfor %}
