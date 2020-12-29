@@ -18,7 +18,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=jocsakesley
+      - POSTGRES_USER=user
       - POSTGRES_PASSWORD=q1w2e3r4
       - POSTGRES_DB=blog_db
   nginx:
