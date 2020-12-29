@@ -3,6 +3,9 @@
 * [Python 3](https://www.python.org/)
 * [Django 3.1.4](https://www.djangoproject.com/)
 * [Bootstrap](https://getbootstrap.com/)
+* [Docker]
+* [Postgres]
+* [Nginx]
 
 
 ## Como rodar o projeto?
@@ -11,6 +14,7 @@
 * Crie um virtualenv com Python 3.
 * Ative o virtualenv.
 * Instale as dependências.
+* Inicie os containers
 * Rode as migrações.
 
 ```
@@ -20,5 +24,6 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python contrib/env_gen.py
-python manage.py migrate
+sudo docker-compose up --build
+sudo docker-compose exec web python manage.py migrate
 ```
