@@ -5,4 +5,5 @@ db.sqlite3
 media/post_img
 staticfiles
 .idea/
-*.pyc
+*pyc
+__pycache__
